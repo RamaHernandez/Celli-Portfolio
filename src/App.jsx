@@ -9,15 +9,17 @@ Se diseñaron tres series de indumentaria, cada una compuesta por cinco conjunto
 Si bien participé en todas las etapas del proyecto, mi aporte se centró principalmente en la realización de la maqueta inicial, el diseño y la ilustración de las tres series de indumentaria, y en la producción fotográfica de los conjuntos materializados. Esta experiencia me permitió articular análisis cultural, experimentación material y construcción visual, transformando una narrativa audiovisual en propuestas concretas de vestuario.`;
 
 // Helper: genera paths con soporte de extensiones mixtas
+const base = import.meta.env.BASE_URL;
+
 const createProjectImages = (folder, count, overrides = {}, defaultExt = "jpg") =>
   Array.from({ length: count }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
     const ext = overrides[i + 1] || defaultExt;
-    return `/images/${folder}/${num}.${ext}`;
+    return `${base}images/${folder}/${num}.${ext}`;
   });
 
 // Proyecto 01 - Anne (ya estaba armado)
-const anneImages = Array.from({ length: 13 }, (_, i) => `/images/anne-${String(i + 1).padStart(2, "0")}.jpg`);
+const anneImages = Array.from({ length: 13 }, (_, i) => `${base}images/anne-${String(i + 1).padStart(2, "0")}.jpg`);
 
 // Proyectos 02-09: solo actualizá el count y overrides cuando cargues fotos
 const project02Images = createProjectImages("02", 24);
