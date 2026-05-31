@@ -20,14 +20,14 @@ const createProjectImages = (folder, count, overrides = {}, defaultExt = "jpg") 
 const anneImages = Array.from({ length: 13 }, (_, i) => `/images/anne-${String(i + 1).padStart(2, "0")}.jpg`);
 
 // Proyectos 02-09: solo actualizá el count y overrides cuando cargues fotos
-const project02Images = createProjectImages("02", 24, { 8: "png", 9: "png" });
+const project02Images = createProjectImages("02", 24);
 const project03Images = createProjectImages("03", 5);
 const project04Images = createProjectImages("04", 11);
 const project05Images = createProjectImages("05", 6);
-const project06Images = createProjectImages("06", 0);
-const project07Images = createProjectImages("07", 0);
-const project08Images = createProjectImages("08", 0);
-const project09Images = createProjectImages("09", 0);
+const project06Images = createProjectImages("06", 8);
+const project07Images = createProjectImages("07", 18);
+const project08Images = createProjectImages("08", 7);
+const project09Images = createProjectImages("09", 10);
 
 const placeholderDescription = "Descripción pendiente. Este proyecto todavía usa contenido temporal hasta que se cargue la información real.";
 
@@ -43,13 +43,13 @@ const projects = [
     description: anneDescription,
   },
   { id: "02.", title: "Diseño y confección\nde Jean", year: "2025+", category: "DISEÑO Y CONFECCIÓN", tags: ["fashion design", "moldería", "confección"], image: project02Images[0], images: project02Images, description: placeholderDescription },
-  { id: "03.", title: "Diseño y confección\nde Saco Tweed", year: "2025+", category: "DISEÑO Y CONFECCIÓN", tags: ["fashion design", "garment craft", "textiles"], image: project03Images[1], images: project03Images, description: placeholderDescription },
+  { id: "03.", title: "Diseño y confección\nde Saco Tweed", year: "2025+", category: "DISEÑO Y CONFECCIÓN", tags: ["fashion design", "garment craft", "textiles"], image: project03Images[0], images: project03Images, description: placeholderDescription },
   { id: "04.", title: "Techpack Design /\nCamisa Patagonia", year: "2025+", category: "TECHPACK DESIGN", tags: ["product dev", "techpack", "technical design"], image: project04Images[2], images: project04Images, description: placeholderDescription },
   { id: "05.", title: "Diseño de remeras y\nestampas", year: "2025+", category: "DISEÑO GRÁFICO", tags: ["graphic design", "visual media", "fashion design"], image: project05Images[3], images: project05Images, description: placeholderDescription },
   { id: "06.", title: "Diseño de colección /\nAlicia Orlandi", year: "2024+", category: "DISEÑO DE INDUMENTARIA", tags: ["trend vision", "fashion design", "conceptual"], image: project06Images[4], images: project06Images, description: placeholderDescription },
   { id: "07.", title: "Diseño de Vestuario e\nIlustración", year: "2024+", category: "VESTUARIO / ILUSTRACIÓN", tags: ["styling", "illustration", "art direction"], image: project07Images[5], images: project07Images, description: placeholderDescription },
-  { id: "08.", title: "Styling y Dirección\nCreativa", year: "2024+", category: "DIRECCIÓN CREATIVA", tags: ["styling", "creative direction", "image"], image: project08Images[0], images: project08Images, description: placeholderDescription },
-  { id: "09.", title: "Fotografía, Edición y\nPostproducción", year: "2024+", category: "FOTOGRAFÍA", tags: ["photography", "visual media", "postproduction"], image: project09Images[1], images: project09Images, description: placeholderDescription },
+  { id: "08.", title: "Styling y Dirección\nCreativa", year: "2024+", category: "DIRECCIÓN CREATIVA", tags: ["styling", "creative direction", "image"], image: project08Images[6], images: project08Images, description: placeholderDescription },
+  { id: "09.", title: "Fotografía, Edición y\nPostproducción", year: "2024+", category: "FOTOGRAFÍA", tags: ["photography", "visual media", "postproduction"], image: project09Images[7], images: project09Images, description: placeholderDescription },
 ];
 
 const skillCards = [
